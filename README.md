@@ -1,5 +1,10 @@
 # instagram-post-extracter
 
+```
+\git clone https://github.com/BaseMax/instagram-post-extracter
+cd instagram-post-extracter
+```
+
 ## Step 0
 
 Sign-in to your personal Instagram account.
@@ -78,5 +83,16 @@ function downloadJSON(data, filename = 'images.json') {
 
 downloadJSON(json);
 ```
+
+
+## Step 7
+
+To automaticly download all images from your JSON file, feel free to run the following python script:
+
+```bash
+python dl.py
+```
+
+License MIT
 
 Copyright 2025, Max Base
