@@ -92,9 +92,13 @@ downloadJSON(json);
 
 ## Step 7
 
-To automatically download all images from the generated JSON file, run the following Python script:
+To automatically download all images from the generated JSON file, run the following PHP or Python script:
 
 ```bash
+php dl.php
+
+OR
+
 python dl.py
 ```
 
