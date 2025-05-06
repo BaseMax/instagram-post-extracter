@@ -61,4 +61,22 @@ const json = JSON.stringify(imgArray, null, 2);
 console.log(json);
 ```
 
+## Setp 6
+
+To download as a JSON file, you can run the following JS code:
+
+```javascript
+function downloadJSON(data, filename = 'images.json') {
+  const blob = new Blob([data], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+downloadJSON(json);
+```
+
 Copyright 2025, Max Base
