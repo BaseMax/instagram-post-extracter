@@ -1,4 +1,15 @@
-# instagram-post-extracter
+# Instagram Post Extractor
+
+Instagram Post Extractor is a simple tool to collect and download images from Instagram posts using your browser and a Python script. Follow the steps below to extract and save images from any Instagram page.
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/BaseMax/instagram-post-extracter
+cd instagram-post-extracter
+```
 
 ## Step 0
 
@@ -10,7 +21,7 @@ Open your target Instagram page in your browser.
 
 ## Step 2
 
-Run the following JS code:
+Run the following JavaScript code in your browser's developer console to collect image sources:
 
 ```javascript
 const container = document.querySelector('div.x1n2onr6');
@@ -20,7 +31,7 @@ const imgSrcs = Array.from(imgElements).map(img => img.src);
 
 ## Step 3
 
-Run the following JS code:
+Run the following JavaScript code to collect unique image URLs as you scroll:
 
 ```javascript
 const uniqueImgSrcs = new Set();
@@ -49,11 +60,11 @@ collectImages();
 
 ## Step 4
 
-Start scrolling from up to end of the page and saw all posts one by one to paginate all pages.
+Scroll through the page to load and display all posts. This will allow the tool to paginate and collect images from all posts on the page.
 
 ## Step 5
 
-Run the following JS code to convert to JSON:
+Run the following JavaScript code to convert the collected image URLs to a JSON format:
 
 ```javascript
 const imgArray = Array.from(uniqueImgSrcs);
@@ -61,9 +72,9 @@ const json = JSON.stringify(imgArray, null, 2);
 console.log(json);
 ```
 
-## Setp 6
+## Step 6
 
-To download as a JSON file, you can run the following JS code:
+To download the collected images as a JSON file, run the following JavaScript code:
 
 ```javascript
 function downloadJSON(data, filename = 'images.json') {
@@ -78,5 +89,23 @@ function downloadJSON(data, filename = 'images.json') {
 
 downloadJSON(json);
 ```
+
+## Step 7
+
+To automatically download all images from the generated JSON file, run the following PHP or Python script:
+
+```bash
+php dl.php
+
+OR
+
+python dl.py
+```
+
+This will download all the images listed in the JSON file to your local system.
+
+## License
+
+MIT License
 
 Copyright 2025, Max Base
