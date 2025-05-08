@@ -19,7 +19,6 @@ HEADERS = {
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'accept-language': 'en-US,en;q=0.9,fa;q=0.8,it;q=0.7',
     'cache-control': 'max-age=0',
-    'if-modified-since': 'Tue, 07 Nov 2023 15:47:14 GMT',
     'priority': 'u=0, i',
     'sec-ch-ua': '"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"',
     'sec-ch-ua-mobile': '?0',
